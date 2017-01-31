@@ -1,0 +1,15 @@
+{
+  "cursinhos": [
+    {
+      "nome": "nome",
+      "coordenadas": [0, 0],
+      "endereco": "endereco",
+      "forma_de_ingresso": "se existe alguma selecao",
+      "custo": "custo de inscrisao ou mensalidade",
+      "contato": {
+        "regiao": "pagina no regiao",
+        "site": "site do cursinho"
+      }
+    }
+  ]
+}
