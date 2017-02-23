@@ -69,6 +69,8 @@
         return cursinho;
     }
 
+    var lastinfoWindowData = null;
+
     function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
             center: cityCoordenates,
@@ -98,7 +100,11 @@
                 // Abrir o infoWindow quando clica no marker
                 google.maps.event.addListener(marker, 'click', (function (marker, infoWindowData, infowindow) {
                     return function () {
+                        if (lastinfoWindowData) {
+                            lastinfoWindowData.close();
+                        }
                         infowindow.setContent(infoWindowData);
+                        lastinfoWindowData = infowindow;
                         infowindow.open(map, marker);
                     };
                 })(marker, infoWindowData, infowindow));
@@ -120,7 +126,7 @@
                 if (cursinho.site != "") {
                     contatos += "<a href=" + cursinho.site + ">Site</a> ";
                 }
-                if (cursinho['páginadofacebook'] != "") {
+                if (cursinho['páginadofacebook'] != ""  ) {
                     contatos += "<a href=" + cursinho['páginadofacebook'] + ">Facebook</a> ";
                 }
 
@@ -139,6 +145,7 @@
 
     }
 
+    $.fn.dataTable.ext.errMode = 'none';
     $.getJSON(url, function(json_data) {
         data = json_data.feed.entry;
         initTable();
