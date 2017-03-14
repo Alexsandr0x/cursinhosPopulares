@@ -2,7 +2,7 @@
 
 Uma simples pagina que lista e mapeia os cursinhos populares do estado de São Paulo
 
-Esse projeto existe para servir de suporte a ONG [Semeando Educação](http://semeandoeducacao.org/).
+Esse projeto existe para servir de suporte a ONG [Semeando Educação](http://semeandoeducacao.org/index.php/cursinhos-populares/).
 
 A ideia é criar um mapa simples de mexer que possa apresentar todas as oportunidades de cursos preparatorios para 
 vestibular com finalidade social. Dentro dessa definição podem entrar desde cursos gratuitos até com preço acessivel.
